@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="4dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <!-- Ürün Resmi -->
+        <ImageView
+            android:id="@+id/pic"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="#EEEEEE"
+            android:scaleType="centerCrop"
+            android:layout_marginEnd="12dp" />
+
+        <!-- Sağ Taraf Bilgileri -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <!-- Ürün Adı -->
+            <TextView
+                android:id="@+id/titleTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textStyle="bold" />
+
+            <!-- Fiyat -->
+            <TextView
+                android:id="@+id/feeEachItemTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp" />
+
+            <!-- Adet Ayarlama + Çöp Kutusu -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="6dp">
+
+                <!-- Silme İkonu -->
+                <ImageView
+                    android:id="@+id/deleteBtn"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_delete"
+                    android:tint="#9E9E9E"
+                    android:layout_marginEnd="12dp" />
+
+                <!-- - -->
+                <ImageView
+                    android:id="@+id/minusCartBtn"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_minus"
+                    android:padding="4dp"
+                    android:background="@drawable/bg_quantity_circle" />
+
+                <!-- Adet -->
+                <TextView
+                    android:id="@+id/numberItemTxt"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="16sp" />
+
+                <!-- + -->
+                <ImageView
+                    android:id="@+id/plusCartBtn"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_plus"
+                    android:padding="4dp"
+                    android:background="@drawable/bg_quantity_circle"
+                    android:layout_marginStart="4dp" />
+            </LinearLayout>
+
+            <!-- Toplam Fiyat -->
+            <TextView
+                android:id="@+id/totalEachItemTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#1A237E"
+                android:layout_marginTop="6dp"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

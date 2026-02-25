@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "883337037222",
+    "project_id": "project200-2-95861",
+    "storage_bucket": "project200-2-95861.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:883337037222:android:b8a3b97ce40116bbb7bb67",
+        "android_client_info": {
+          "package_name": "com.levent.project2002"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBff3XJSzJ-GSG8QKj8wv5sPOmpWD_ahfE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Project2002">
+        <activity
+            android:name=".Activity.TrackingActivity"
+            android:exported="false"
+            android:label="Gönderi Takip" />
+        <activity
+            android:name=".Activity.LuckyWheelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.OffersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.WishlistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AddProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.OrderDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.CheckoutActivity"
+            android:exported="false" /> <!-- BURAYA KENDİ GOOGLE MAPS API KEY'İNİ KOY -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBAhSDKmp8Wr5jPus55Y5VoRLd6GUjbSIY" />
+
+        <activity
+            android:name=".Activity.OrderSuccessActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Project2002" />
+        <activity
+            android:name=".Activity.ManualAddressEntryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MapSelectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AddressSelectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.OrdersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.AddressesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.CartActivity"
+            android:exported="false" />
+        <activity android:name=".Activity.RegisterActivity" />
+        <activity android:name=".Activity.LoginActivity" />
+        <activity
+            android:name=".Activity.ListItemsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.IntroActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.BaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.MainActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MapSelectionActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarMapSelection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarMapSelection"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Konum Seçimi"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:layout_gravity="center_vertical|start"
+                android:textStyle="bold" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <EditText
+        android:id="@+id/etSearchLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Adres, şehir veya yer arayın..."
+        android:padding="12dp"
+        android:layout_margin="8dp"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:drawablePadding="8dp"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/appBarMapSelection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="4dp"
+        android:imeOptions="actionSearch"
+        android:inputType="text" />
+
+    <org.osmdroid.views.MapView
+        android:id="@+id/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tilesource="Mapnik"
+        app:layout_constraintTop_toBottomOf="@id/etSearchLocation" app:layout_constraintBottom_toTopOf="@id/bottomPanel" />
+
+    <ImageView
+        android:id="@+id/ivMapPin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_map_pin"
+        android:clickable="false"
+        android:focusable="false"
+        android:contentDescription="Konum İşaretçisi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/map_view"
+        app:layout_constraintBottom_toBottomOf="@id/map_view"
+        android:layout_marginBottom="24dp" />
+
+    <LinearLayout
+        android:id="@+id/bottomPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tvSelectedLocationName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/ic_location_on"
+            android:layout_marginBottom="16dp"
+            tools:text="Sunay Mh. Muş Merkez/Muş" />
+
+        <TextView
+            android:id="@+id/tvAddressDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:padding="12dp"
+            android:background="#EFEFEF"
+            android:layout_marginBottom="16dp"
+            android:text="Siparişin, seçtiğin konuma teslim edilecektir. Adresini bir sonraki sayfada düzenleyebilirsin." />
+
+        <Button
+            android:id="@+id/btnConfirmLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="İşaretlediğim Konumu Ekle"
+            android:padding="14dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

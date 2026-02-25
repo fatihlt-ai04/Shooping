@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".Activity.CheckoutActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarCheckout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Güvenli Ödeme" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintBottom_toTopOf="@id/bottomSummaryLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teslimat Adresi"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Seçili Adres"
+                            android:textStyle="bold"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvAddEditAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="Ekle/Düzenle"
+                            android:textColor="@color/design_default_color_primary"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <Spinner
+                        android:id="@+id/spinnerDeliveryAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:spinnerMode="dropdown"
+                        android:background="@drawable/spinner_border" />
+
+                    <CheckBox
+                        android:id="@+id/cbSendInvoiceToSameAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Faturamı Aynı Adrese Gönder"
+                        android:checked="true"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kart Bilgileri"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <EditText
+                        android:id="@+id/etCardNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Kart Numarası (16 Hane)"
+                        android:inputType="number"
+                        android:maxLength="16" /> <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp">
+
+                    <EditText
+                        android:id="@+id/etExpirationMonth" android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Ay (MM)"
+                        android:inputType="number"
+                        android:maxLength="2" />
+
+                    <EditText
+                        android:id="@+id/etExpirationYear" android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Yıl (YY)"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:layout_marginStart="8dp" />
+
+                    <EditText
+                        android:id="@+id/etCVV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="CVV"
+                        android:inputType="numberPassword"
+                        android:maxLength="4"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/cb3DSecure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3D Secure ile ödeme yapmak istiyorum"
+                        android:layout_marginTop="8dp"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Taksit Seçenekleri"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <RadioGroup
+                android:id="@+id/rgInstallmentOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_border"
+                android:padding="8dp">
+
+                <RadioButton
+                    android:id="@+id/checkBoxInstallment1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tek Çekim"
+                    android:padding="8dp"
+                    android:checked="true"
+                    tools:text="Tek Çekim 124.89 TL" />
+
+                <RadioButton
+                    android:id="@+id/checkBoxInstallment2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2 Taksit"
+                    android:padding="8dp"
+                    tools:text="2 Taksit 2 x 66.65 TL" />
+
+                <RadioButton
+                    android:id="@+id/checkBoxInstallment3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3 Taksit"
+                    android:padding="8dp"
+                    tools:text="3 Taksit 3 x 41.63 TL" />
+
+                <RadioButton
+                    android:id="@+id/checkBoxInstallment4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4 Taksit"
+                    android:padding="8dp"
+                    tools:text="4 Taksit 4 x 31.22 TL" />
+
+            </RadioGroup>
+
+            <Space android:layout_width="match_parent" android:layout_height="50dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomSummaryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:padding="16dp"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tvTotalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/design_default_color_primary"
+            tools:text="124.89 TL"
+            android:layout_gravity="center_vertical" />
+
+        <Button
+            android:id="@+id/btnConfirmAndFinish"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Onayla ve Bitir"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="10dp"
+        android:translationZ="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

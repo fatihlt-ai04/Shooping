@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">project200.2</string>
+    <string name="intro_title">Welcome to <font color="#39c7a5"> Digital Store</font>\n  a<font color="#39c7a5"> gateway </font> to the Latest Tesch</string>
+    <string name="intro_sub_title"></string>
+    <string name="let_s_get_started">Let\'s Get Started</string>
+
+    <string name="signing">Already have an account<font color="#39c7a5"> Sign In</font></string>
+    <string name="recommendation">Recommendation</string>
+    <string name="see_all">See All</string>
+    <string name="profile">Profile</string>
+    <string name="my_order">My Order</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="cart">Cart</string>
+    <string name="explorer">Explorer</string>
+</resources>

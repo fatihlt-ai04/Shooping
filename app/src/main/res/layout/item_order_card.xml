@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:layout_marginHorizontal="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="12dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:background="#FAFAFA">
+
+            <TextView
+                android:id="@+id/tvOrderDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="8 Aralık 2025" />
+
+            <TextView
+                android:id="@+id/tvOrderTotalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/tvOrderDate"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Toplam: 192.96 TL" />
+
+            <TextView
+                android:id="@+id/btnDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/orange"
+                android:text="Detaylar"
+                android:textSize="14sp"
+                android:drawablePadding="4dp"
+                app:drawableEndCompat="@drawable/ic_arrow_right"
+                app:tint="@color/orange"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightGrey" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="10dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvOrderStatus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="6dp"
+                android:textColor="@color/green"
+                android:textSize="15sp"
+                app:drawableStartCompat="@drawable/ic_check"
+                app:tint="@color/green"
+                tools:text="Teslim Edildi" />
+
+            <Button
+                android:id="@+id/btnRateOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="Değerlendir"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:backgroundTint="#F5F5F5"
+                android:visibility="gone"
+                app:strokeColor="@color/lightGrey"
+                app:strokeWidth="1dp"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvThumbnails"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp"
+            android:layout_marginTop="4dp"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="3"
+            tools:orientation="horizontal"
+            tools:listitem="@layout/item_order_thumbnail" />
+
+        <TextView
+            android:id="@+id/tvItemCountSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:paddingHorizontal="12dp"
+            android:textColor="@color/darkGrey"
+            android:textSize="13sp"
+            tools:text="Toplam 4 ürün teslim edildi" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

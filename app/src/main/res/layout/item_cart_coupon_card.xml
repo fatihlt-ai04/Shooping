@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/couponCardContainer"
+    android:layout_width="150dp"
+    android:layout_height="80dp"
+    android:layout_marginEnd="8dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/coupon_border_bg"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvDiscountValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="%10 İNDİRİM" />
+
+        <TextView
+            android:id="@+id/tvDiscountTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            tools:text="Kişisel Bakım Aletleri Kuponu" />
+
+        <TextView
+            android:id="@+id/tvAltLimit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/darkGrey"
+            android:textSize="8sp"
+            tools:text="Min. 500 TL" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
