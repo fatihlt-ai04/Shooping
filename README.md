@@ -4,29 +4,14 @@ Bu proje, Kotlin ve Supabase kullanılarak geliştirilmiş bir e-ticaret uygulam
 
 ## Uygulama Ekran Görüntüleri (Preview)
 
-### Ana Sayfa
-![Ana Sayfa](a1.jpg)
+| Ana Sayfa | Menü | Hazırlanıyor |
+| :---: | :---: | :---: |
+| ![Ana Sayfa](a1.jpg) | ![Menü](menü.jpg) | ![Hazırlama](hazırlama.jpg) |
 
-### Menü
-![Menü](menü.jpg)
+| Ödeme Ekranı | Sipariş Takip | Adres Bilgileri |
+| :---: | :---: | :---: |
+| ![Ödeme](odeme.jpg) | ![Takip](takip.jpg) | ![Adres](adres.jpg) |
 
-### Hazırlanıyor
-![Hazırlama](hazırlama.jpg)
-
-### Ödeme Ekranı
-![Ödeme](odeme.jpg)
-
-### Sipariş Takip
-![Takip](takip.jpg)
-
-### Adres Bilgileri
-![Adres](adres.jpg)
-
-### Favoriler
-![Favori](favori.jpg)
-
-### Onay Ekranı
-![Onaylama](onaylama.jpg)
-
-### Hediye Seçenekleri
-![Hediye](hediye.jpg)
+| Favoriler | Onay Ekranı | Hediye Seçenekleri |
+| :---: | :---: | :---: |
+| ![Favori](favori.jpg) | ![Onaylama](onaylama.jpg) | ![Hediye](hediye.jpg) |
